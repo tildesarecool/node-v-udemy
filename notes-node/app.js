@@ -1,7 +1,10 @@
 console.log("Starting app.js");
 
 const fs = require('fs');
-const os = require('os');
+const _ = require('lodash');
+
+const notes = require('./notes');
+
 
 // lodash inserts a "nodemodules/lodash folder" that should really be exccluded from 
 // a git repot destined for git hub or simply deleted
@@ -10,15 +13,13 @@ const os = require('os');
 // in the app's (notes) folder should re-download/insert that folder structure
 // it's good to let the 'npm install' re-generate the folder structure since it will vary
 // depending on the node/lodash version
-const _ = require('lodash');
-const notes = require('./notes');
 
 
 // utilizing is string utility in lodash
-console.log(_.isString(true));
-console.log(_.isString('Keith'));
+//console.log(_.isString(true));
+//console.log(_.isString('Keith'));
 
-var filteredArray = _.uniq(['Keith', 1, 'Keith', 1, 2, 3, 4]);
+var filteredArray = _.uniq(['Mike']);
 console.log(filteredArray);
 
 
