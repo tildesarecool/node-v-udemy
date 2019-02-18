@@ -1,0 +1,2 @@
+nodemon app.js 
+initial setup - install appjs - this downloads dependencies like nodash 
