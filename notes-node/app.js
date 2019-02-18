@@ -6,33 +6,27 @@ const _ = require('lodash');
 const notes = require('./notes');
 
 
-// lodash inserts a "nodemodules/lodash folder" that should really be exccluded from 
-// a git repot destined for git hub or simply deleted
-// since lodash is mentioned as a dependency in package.json running the command simply
-// npm install
-// in the app's (notes) folder should re-download/insert that folder structure
-// it's good to let the 'npm install' re-generate the folder structure since it will vary
-// depending on the node/lodash version
+
+// var filteredArray = _.uniq(['Mike']);
+// console.log(filteredArray);
+
+var command = process.argv[2];
+console.log('Command: ', command);
+console.log(process.argv);
+
+if (command === 'add') {
+    console.log('Adding new note');
+} else if (command === 'list') {
+    console.log('Listing all notes');
+// adding two more else/clauses on my own: read and remove
+} else if (command === 'read') {
+    console.log('Reading note'); // showing one single note
+} else if (command === 'remove') {
+    console.log('removing note');
+} else {
+    console.log("Command not recognized");
+}
 
 
-// utilizing is string utility in lodash
-//console.log(_.isString(true));
-//console.log(_.isString('Keith'));
 
-var filteredArray = _.uniq(['Mike']);
-console.log(filteredArray);
-
-
-// var res = notes.addNote();
-// console.log(res);
-
-// var sum = notes.notesAdd(10,3);
-
-// console.log('Result: ', sum);
-
-// var user = os.userInfo();
-
-// this is used in modern versions of node instead of just 'appendFile'
-// fs.appendFileSync('greetings.txt', `Hello ${user.username}! You are ${notes.age}.`);
-
-// console.log(user);
+//console.log(process.argv); // cli agruments array
