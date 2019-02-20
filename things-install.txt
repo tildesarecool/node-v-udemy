@@ -5,3 +5,25 @@ the "--save" make a prereq in the json file so installing notes app.js file
 with auto install yargs (alongside nodash)
 npm install yargs --save 
 udemy video says to specify v4.7.1 of yargs but that is from 2016 so I'm going to risk it and let the latest version install 
+
+this is from 3.15...
+
+first the object:
+var JSobject = {
+    title: 'This is a test note',
+    body: 'with some test content'
+};
+
+JSON.stringify: converts object into string, e.g. 
+var somevariable = json.stringify(JSobject);
+
+then can write that string to a JSON file:
+fs.writefilesync('filename.json', somevariable);
+
+then read that string back fromt he json text file:
+var noteSring = fs.readFileSync('notes.json');
+
+and finally convert back to object:
+var note = JSON.parse(somevariable);
+verify is object or string with
+typeof somevariable
