@@ -27,3 +27,10 @@ and finally convert back to object:
 var note = JSON.parse(somevariable);
 verify is object or string with
 typeof somevariable
+
+saple notes CLI, atleast for the progress i am now:
+node app.js add --title="super secret" --body="content here"
+in theory, this command should auto-download the dependencies:
+npm install app.js 
+ya, "npm" not node. only two dependencies right now so not really 
+necessary. probably will be eventually.
